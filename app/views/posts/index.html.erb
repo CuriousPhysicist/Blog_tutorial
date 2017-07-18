@@ -10,6 +10,12 @@
 				<div>
 					<%= raw(post.body).truncate(358) %>
 				</div>
+
+				<div class="text-center">
+					<%= link_to "READ MORE", post_path(post) %>
+				</div>
+
+				<br>
 			</div>
 		<% end %>
 	</div>

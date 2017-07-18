@@ -1,4 +1,4 @@
-class PostController < ApplicationController
+class PostsController < ApplicationController
 
 	before_action :find_post, only: [:edit, :update, :show, :delete]
 
@@ -41,7 +41,7 @@ class PostController < ApplicationController
 	def destroy
 		if @post.destroy
 			flash[:notice] = "Post Sucessfully deleted."
-			redirect_to posts_path
+			redirect_to post_path
 		else
 			flash[:alert] = "Error updating post"
 		end

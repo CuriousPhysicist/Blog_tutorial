@@ -1,5 +1,5 @@
 <%= simple_form_for @post do |f| %>
-	<% if @post.erros.any? %>
+	<% if @post.errors.any? %>
 		<div id="error_explaination">
 			<h2>
 				<%= "#{pluralize(post.errors.count, "error")} prohibited this post from being saved:" %>
@@ -18,7 +18,7 @@
 		<%= f.input :title, class: "form-control" %>
 	</div>
 	<div class="form-group">
-		<%= f.text :body, :as => :ckeditor, input_html: { :ckeditor => {:toolbar => 'FULL'} }, class: "form-control" %>
+		<%= f.input :body, :as => :ckeditor, input_html: { :ckeditor => {:toolbar => 'FULL'} }, class: "form-control" %>
 	</div>
 	<div class="form-group">
 		<%= f.button :submit %>
