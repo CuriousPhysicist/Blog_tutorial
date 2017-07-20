@@ -42,7 +42,7 @@ class PostsController < ApplicationController
 	def destroy
 		if @post.destroy
 			flash[:notice] = "Post Sucessfully deleted."
-			redirect_to post_path
+			redirect_to root_path
 		else
 			flash[:alert] = "Error updating post"
 		end
